@@ -19,7 +19,7 @@ export const searchMovies = async page => {
     store.state.message = ''
   }
   try {
-    const res = await fetch(`http://www.omdbapi.com/?apikey=da5d1b76&s=${store.state.searchText}&page=${page}`)
+    const res = await fetch(` http://www.omdbapi.com/?i=tt3896198&apikey=da5d1b76&s=${store.state.searchText}&page=${page}`)
     const { Search, totalResults, Response, Error } = await res.json()
     if(Response === 'True') {
       store.state.movies = [
@@ -39,7 +39,7 @@ export const searchMovies = async page => {
 }
 export const getMovieDetails = async id => {
   try {
-    const res = await fetch(`https://omdbapi.com?apikey=da5d1b76&i=${id}&plot=full`)
+    const res = await fetch(` http://www.omdbapi.com/?i=tt3896198&apikey=da5d1b76&i=${id}&plot=full`)
     store.state.movie = await res.json()
   } catch(error) {
     console.log('getMovieDetails error:', error)
