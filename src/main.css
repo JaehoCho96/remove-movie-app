@@ -1,23 +1,25 @@
+/* Common */
 html {
   --color-black: #0E111B;
   --color-white: #FFF;
-  --color-white-50: rgba(255, 255, 255, .5);
-  --color-white-30: rgba(255, 255, 255, .3);
-  --color-white-20: rgba(255, 255, 255, .2);
-  --color-white-10: rgba(255, 255, 255, .1);
-  --color-white-5: rgba(255, 255, 255, .05);
+  --color-white-50: rgba(255,255,255,.5);
+  --color-white-30: rgba(255,255,255,.3);
+  --color-white-20: rgba(255,255,255,.2);
+  --color-white-10: rgba(255,255,255,.1);
+  --color-white-5: rgba(255,255,255,.05);
   --color-primary: #FDC000;
   --color-hover: #F86A05;
   --color-area: #1C212E;
 }
-
 body {
   background-color: var(--color-black);
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   line-height: 1.4;
   color: var(--color-white);
 }
 
+
+/* Container */
 .container {
   max-width: 1120px;
   margin: 0 auto;
@@ -34,6 +36,8 @@ body {
   }
 }
 
+
+/* Button */
 .btn {
   height: 50px;
   padding: 0 20px;
@@ -59,6 +63,8 @@ body {
   color: var(--color-white);
 }
 
+
+/* Default Loading Animation */
 .the-loader {
   width: 30px;
   height: 30px;
@@ -71,11 +77,13 @@ body {
 .the-loader.hide {
   display: none;
 }
-@keyframes loader{
+@keyframes loader {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 
+
+/* Skeleton Loading Animation */
 .skeleton {
   position: relative;
   overflow: hidden;
@@ -102,6 +110,8 @@ body {
   100% { transform: translateX(100%); }
 }
 
+
+/* components/TheHeader */
 header {
   padding: 20px 40px;
   background-color: rgba(14,17,27,.9);
@@ -113,8 +123,8 @@ header {
   gap: 40px;
 }
 header .logo {
-  font-size: 20px;
   font-family: "Oswald", sans-serif;
+  font-size: 20px;
   color: var(--color-white-50);
   text-decoration: none;
 }
@@ -166,6 +176,7 @@ header .user img {
 }
 
 
+/* components/TheFooter */
 footer {
   padding: 40px 40px 60px;
   text-align: center;
@@ -178,6 +189,8 @@ footer a:hover {
   text-decoration: underline;
 }
 
+
+/* components/Headline */
 .headline {
   margin-bottom: 40px;
 }
@@ -200,6 +213,7 @@ footer a:hover {
 }
 
 
+/* components/Search */
 .search {
   display: flex;
   gap: 10px;
@@ -224,6 +238,8 @@ footer a:hover {
   max-width: 150px;
 }
 
+
+/* components/MovieList */
 .movie-list {
   padding: 20px;
   border-radius: 4px;
@@ -242,6 +258,7 @@ footer a:hover {
 }
 
 
+/* components/MovieItem */
 .movies .movie {
   --width: 200px;
   width: var(--width);
@@ -280,6 +297,8 @@ footer a:hover {
   color: var(--color-white);
 }
 
+
+/* components/MovieListMore */
 .view-more {
   width: 100%;
   max-width: 300px;
@@ -290,6 +309,8 @@ footer a:hover {
   display: none;
 }
 
+
+/* routes/Movie */
 .the-movie {
   color: var(--color-white-50);
   display: flex;
@@ -308,8 +329,8 @@ footer a:hover {
   flex-grow: 1;
 }
 .the-movie .title {
-  font-size: 70px;
   font-family: "Oswald", sans-serif;
+  font-size: 70px;
   line-height: 1;
   color: var(--color-white);
   margin-bottom: 30px;
@@ -329,10 +350,10 @@ footer a:hover {
   height: 400px;
 }
 .the-movie h3 {
-  font-size: 20px;
   font-family: "Oswald", sans-serif;
+  font-size: 20px;
   color: var(--color-white);
-  margin: 24px 0 6px;  
+  margin: 24px 0 6px;
 }
 @media (max-width: 1200px) {
   .the-movie {
@@ -352,6 +373,7 @@ footer a:hover {
   }
 }
 
+/* routes/About */
 .about .photo {
   width: 230px;
   height: 230px;
@@ -360,8 +382,8 @@ footer a:hover {
   background-size: cover;
 }
 .about .name {
-  font-size: 40px;
   font-family: "Oswald", sans-serif;
+  font-size: 40px;
   margin-bottom: 20px;
 }
 .about p {
@@ -377,6 +399,8 @@ footer a:hover {
   text-decoration: underline;
 }
 
+
+/* routes/NotFound */
 .not-found h1 {
   font-size: 70px;
   font-weight: 700;

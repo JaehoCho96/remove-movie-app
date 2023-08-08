@@ -12,6 +12,6 @@ export default class App extends Component {
       theHeader,
       routerView,
       theFooter
-      )
+    )
   }
 }
